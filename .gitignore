@@ -1,0 +1,9 @@
+# 本仓库只放脚本本体、文档和回归脚本
+# 不提交：保存下来的页面快照（含个人信息）、抓取的课程内容、本地分析产物
+*.html
+*_files/
+tools/hw-graded.json
+tools/*.local.*
+node_modules/
+.DS_Store
+Thumbs.db
