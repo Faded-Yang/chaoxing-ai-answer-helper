@@ -1,7 +1,10 @@
-# 本仓库只放脚本本体、文档和回归脚本
+# 本仓库只放脚本本体、文档和工具
 # 不提交：保存下来的页面快照（含个人信息）、抓取的课程内容、本地分析产物
 *.html
+!tools/fixtures/*.html
 *_files/
+*.json
+!tools/fixtures/*.json
 tools/hw-graded.json
 tools/*.local.*
 node_modules/

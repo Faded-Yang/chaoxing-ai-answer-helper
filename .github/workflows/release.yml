@@ -1,0 +1,37 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 创建 Release 并附上 userscript
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 && \
+            gh release upload "$TAG" chaoxing-zhihuishu-ai.user.js --clobber || \
+            gh release create "$TAG" chaoxing-zhihuishu-ai.user.js \
+              --title "$TAG" \
+              --notes-file docs/RELEASE-NOTES.md
+
+      - name: 尝试同步仓库 topics（需要 Administration 权限，失败不影响）
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cat > /tmp/topics.json <<'JSON'
+          {"names":["userscript","chaoxing","zhihuishu","deepseek","ai","tampermonkey","scriptcat","automation"]}
+          JSON
+          gh api -X PUT "repos/${GITHUB_REPOSITORY}/topics" --input /tmp/topics.json

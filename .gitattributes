@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# userscript 必须是 LF：部分脚本管理器对 CRLF 的 header 解析不严格，统一成 LF 最稳
+*.user.js text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.md text eol=lf
+*.yml text eol=lf

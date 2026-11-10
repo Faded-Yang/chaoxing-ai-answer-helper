@@ -1,0 +1,32 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 语法检查（userscript）
+        run: node --check chaoxing-zhihuishu-ai.user.js
+
+      - name: AI 补丁回归断言（30 项，直接切真实源码片段）
+        run: node tools/verify-ai-patch.cjs
+
+      - name: 作业结果分析工具（合成夹具，应为 6 题 / 满分 30 / 得 16）
+        run: |
+          out=$(node tools/analyze-work-result.cjs tools/fixtures/sample-work-result.html)
+          echo "$out"
+          echo "$out" | grep -q "解析：6 题，满分 30，累计得分 16" || { echo "::error::夹具解析结果与预期不符"; exit 1; }
+
+      - name: 发布前敏感信息扫描
+        run: node tools/publish-scan.cjs

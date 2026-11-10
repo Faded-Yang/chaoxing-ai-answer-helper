@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 上游项目（isMobile 原版）
+    url: https://scriptcat.org/zh-CN/script-show-page/711
+    about: 视频播放、任务点跳转、平台适配等上游问题，请到原发布页反馈
+  - name: DeepSeek API 文档
+    url: https://api-docs.deepseek.com/
+    about: 模型名、价格、JSON 输出、思考模式等接口问题

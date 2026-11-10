@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>作业详情（合成测试夹具）</title>
+</head>
+<body>
+<!-- 本文件是「作业详情」页的结构副本，用于测试 tools/analyze-work-result.cjs。
+     题目与答案全部虚构，不含任何真实课程内容。结构按超星作业详情页真实 DOM 复刻：
+     div.mark_item > h2.type_tit ; div.marBom60.questionLi[id=questionXXX] >
+     h3.mark_name > span.colorShallow(题型, N分) + span.qtContent ; ul.mark_letter > li ;
+     div.mark_answer > div.mark_key > span.stuAnswerContent / span.rightAnswerContent ;
+     div.mark_score > .mark_judge_name(.marking_dui|.marking_cuo|.marking_ban) + .totalScore > i -->
+<div class="subNav">作业详情</div>
+<div class="fanyaMarking TiMu" id="fanyaMarking">
+  <div class="detailsHead">
+    <h2 class="mark_title">示例课程：第三讲 测试夹具（虚构）</h2>
+    <div class="infoHead"><span>题量: 6</span><span>满分: 30</span></div>
+    <span class="resultNum"><i>16</i>分</span>
+  </div>
+  <div class="mark_table ans-cc fontLabel">
+
+    <div class="mark_item">
+      <h2 class="type_tit">一. 单选题（共2题，10分）</h2>
+
+      <div class="marBom60 questionLi singleQuesId" id="question1001" data="1001">
+        <div class="aiArea"><div class="aiAreaContent">
+          <h3 class="mark_name colorDeep">1. <span class="colorShallow">(单选题, 5分)</span><span class="qtContent workTextWrap"><p>夹具单选题一：以下哪个选项是甲？(&nbsp;&nbsp;)</p></span></h3>
+          <ul class="mark_letter colorDeep qtDetail">
+            <li class="workTextWrap">A. <p>甲</p></li>
+            <li class="workTextWrap">B. <p>乙</p></li>
+            <li class="workTextWrap">C. <p>丙</p></li>
+            <li class="workTextWrap">D. <p>丁</p></li>
+          </ul>
+          <div class="mark_answer">
+            <div class="mark_key clearfix">
+              <span class="colorDeep marginRight40 fl"><i class="fontWeight">我的答案:</i><span class="stuAnswerContent">A</span></span>
+              <span class="element-invisible-hidden colorDeep marginRight40 fl">:甲; </span>
+              <span class="colorGreen marginRight40 fl"><i class="fontWeight">正确答案:</i><span class="rightAnswerContent workTextWrap">A</span></span>
+              <span class="element-invisible-hidden colorGreen marginRight40 fl">:甲; </span>
+            </div>
+            <div class="mark_score">
+              <div class="fl catalog_tishi80"><div class="mark_judge_name"><span class="marking_dui"></span></div></div>
+              <div class="totalScore fr"><i>5</i>分</div>
+            </div>
+          </div>
+        </div></div>
+        <a href="javascript:;" class="aiAssistant"><span><i>AI讲解</i></span></a>
+      </div>
+
+      <div class="marBom60 questionLi singleQuesId" id="question1002" data="1002">
+        <div class="aiArea"><div class="aiAreaContent">
+          <h3 class="mark_name colorDeep">2. <span class="colorShallow">(单选题, 5分)</span><span class="qtContent workTextWrap"><p>夹具单选题二：与讲义口径最贴合的表述是(&nbsp;&nbsp;)</p></span></h3>
+          <ul class="mark_letter colorDeep qtDetail">
+            <li class="workTextWrap">A. <p>讲义口径</p></li>
+            <li class="workTextWrap">B. <p>通识顺口说法</p></li>
+          </ul>
+          <div class="mark_answer">
+            <div class="mark_key clearfix">
+              <span class="colorDeep marginRight40 fl"><i class="fontWeight">我的答案:</i><span class="stuAnswerContent">B</span></span>
+              <span class="element-invisible-hidden colorDeep marginRight40 fl">:通识顺口说法; </span>
+              <span class="colorGreen marginRight40 fl"><i class="fontWeight">正确答案:</i><span class="rightAnswerContent workTextWrap">A</span></span>
+              <span class="element-invisible-hidden colorGreen marginRight40 fl">:讲义口径; </span>
+            </div>
+            <div class="mark_score">
+              <div class="fl catalog_tishi80"><div class="mark_judge_name"><span class="marking_cuo"></span></div></div>
+              <div class="totalScore fr"><i>0</i>分</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="mark_item">
+      <h2 class="type_tit">二. 多选题（共2题，12分）</h2>
+
+      <div class="marBom60 questionLi singleQuesId" id="question1003" data="1003">
+        <div class="aiArea"><div class="aiAreaContent">
+          <h3 class="mark_name colorDeep">3. <span class="colorShallow">(多选题, 6分)</span><span class="qtContent workTextWrap"><p>夹具多选题一：漏选（少选一个）(&nbsp;&nbsp;)</p></span></h3>
+          <ul class="mark_letter colorDeep qtDetail">
+            <li class="workTextWrap">A. <p>甲项</p></li>
+            <li class="workTextWrap">B. <p>乙项</p></li>
+            <li class="workTextWrap">C. <p>丙项</p></li>
+            <li class="workTextWrap">D. <p>丁项</p></li>
+          </ul>
+          <div class="mark_answer">
+            <div class="mark_key clearfix">
+              <span class="colorDeep marginRight40 fl"><i class="fontWeight">我的答案:</i><span class="stuAnswerContent">BC</span></span>
+              <span class="element-invisible-hidden colorDeep marginRight40 fl">:乙项; 丙项; </span>
+              <span class="colorGreen marginRight40 fl"><i class="fontWeight">正确答案:</i><span class="rightAnswerContent workTextWrap">BCD</span></span>
+              <span class="element-invisible-hidden colorGreen marginRight40 fl">:乙项; 丙项; 丁项; </span>
+            </div>
+            <div class="mark_score">
+              <div class="fl catalog_tishi80"><div class="mark_judge_name"><span class="marking_ban"></span></div></div>
+              <div class="totalScore fr"><i>3</i>分</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="marBom60 questionLi singleQuesId" id="question1004" data="1004">
+        <div class="aiArea"><div class="aiAreaContent">
+          <h3 class="mark_name colorDeep">4. <span class="colorShallow">(多选题, 6分)</span><span class="qtContent workTextWrap"><p>夹具多选题二：全选导致整题 0 分(&nbsp;&nbsp;)</p></span></h3>
+          <ul class="mark_letter colorDeep qtDetail">
+            <li class="workTextWrap">A. <p>甲项</p></li>
+            <li class="workTextWrap">B. <p>乙项</p></li>
+            <li class="workTextWrap">C. <p>丙项</p></li>
+            <li class="workTextWrap">D. <p>丁项</p></li>
+          </ul>
+          <div class="mark_answer">
+            <div class="mark_key clearfix">
+              <span class="colorDeep marginRight40 fl"><i class="fontWeight">我的答案:</i><span class="stuAnswerContent">ABCD</span></span>
+              <span class="element-invisible-hidden colorDeep marginRight40 fl">:甲项; 乙项; 丙项; 丁项; </span>
+              <span class="colorGreen marginRight40 fl"><i class="fontWeight">正确答案:</i><span class="rightAnswerContent workTextWrap">BC</span></span>
+              <span class="element-invisible-hidden colorGreen marginRight40 fl">:乙项; 丙项; </span>
+            </div>
+            <div class="mark_score">
+              <div class="fl catalog_tishi80"><div class="mark_judge_name"><span class="marking_cuo"></span></div></div>
+              <div class="totalScore fr"><i>0</i>分</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="mark_item">
+      <h2 class="type_tit">三. 判断题（共2题，8分）</h2>
+
+      <div class="marBom60 questionLi singleQuesId" id="question1005" data="1005">
+        <div class="aiArea"><div class="aiAreaContent">
+          <h3 class="mark_name colorDeep">5. <span class="colorShallow">(判断题, 4分)</span><span class="qtContent workTextWrap"><p>夹具判断题一：说法正确。(&nbsp;&nbsp;)</p></span></h3>
+          <ul class="mark_letter colorDeep qtDetail">
+            <li class="workTextWrap">A. <p>正确</p></li>
+            <li class="workTextWrap">B. <p>错误</p></li>
+          </ul>
+          <div class="mark_answer">
+            <div class="mark_key clearfix">
+              <span class="colorDeep marginRight40 fl"><i class="fontWeight">我的答案:</i><span class="stuAnswerContent">A</span></span>
+              <span class="element-invisible-hidden colorDeep marginRight40 fl">:正确; </span>
+              <span class="colorGreen marginRight40 fl"><i class="fontWeight">正确答案:</i><span class="rightAnswerContent workTextWrap">A</span></span>
+              <span class="element-invisible-hidden colorGreen marginRight40 fl">:正确; </span>
+            </div>
+            <div class="mark_score">
+              <div class="fl catalog_tishi80"><div class="mark_judge_name"><span class="marking_dui"></span></div></div>
+              <div class="totalScore fr"><i>4</i>分</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="marBom60 questionLi singleQuesId" id="question1006" data="1006">
+        <div class="aiArea"><div class="aiAreaContent">
+          <h3 class="mark_name colorDeep">6. <span class="colorShallow">(判断题, 4分)</span><span class="qtContent workTextWrap"><p>夹具判断题二：说法错误。(&nbsp;&nbsp;)</p></span></h3>
+          <ul class="mark_letter colorDeep qtDetail">
+            <li class="workTextWrap">A. <p>正确</p></li>
+            <li class="workTextWrap">B. <p>错误</p></li>
+          </ul>
+          <div class="mark_answer">
+            <div class="mark_key clearfix">
+              <span class="colorDeep marginRight40 fl"><i class="fontWeight">我的答案:</i><span class="stuAnswerContent">B</span></span>
+              <span class="element-invisible-hidden colorDeep marginRight40 fl">:错误; </span>
+              <span class="colorGreen marginRight40 fl"><i class="fontWeight">正确答案:</i><span class="rightAnswerContent workTextWrap">B</span></span>
+              <span class="element-invisible-hidden colorGreen marginRight40 fl">:错误; </span>
+            </div>
+            <div class="mark_score">
+              <div class="fl catalog_tishi80"><div class="mark_judge_name"><span class="marking_dui"></span></div></div>
+              <div class="totalScore fr"><i>4</i>分</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
